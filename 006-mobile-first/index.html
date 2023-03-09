@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>AluraBooks</title>
 </head>
@@ -52,5 +53,52 @@
         <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
         <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
     </section>
+
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">Novos lançamentos</h2>
+        <div class="swiper">
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/livros-carrossel/ApacheKafka.svg" alt="ApacheKafka"></div>
+                <div class="swiper-slide"><img src="img/livros-carrossel/Arquitetura.svg" alt="Arquitetura"></div>
+                <div class="swiper-slide"><img src="img/livros-carrossel/Construct2.svg" alt="Construct2"></div>
+                <div class="swiper-slide"><img src="img/livros-carrossel/Gestão.svg" alt="Gestão"></div>
+                <div class="swiper-slide"><img src="img/livros-carrossel/Gestão2.svg" alt="Gestão2"></div>
+                <div class="swiper-slide"><img src="img/livros-carrossel/Javascript.svg" alt="Javascript"></div>
+                <div class="swiper-slide"><img src="img/livros-carrossel/Liderança.svg" alt="Liderança"></div>
+                <div class="swiper-slide"><img src="img/livros-carrossel/MetricasAgeis.svg" alt="MetricasAgeis"></div>
+                <div class="swiper-slide"><img src="img/livros-carrossel/Nodejs.svg" alt="Nodejs"></div>
+                <div class="swiper-slide"><img src="img/livros-carrossel/Portugol.svg" alt="Portugol"></div>
+                <div class="swiper-slide"><img src="img/livros-carrossel/ReactNative.svg" alt="ReactNative"></div>
+                <div class="swiper-slide"><img src="img/livros-carrossel/Tuning.svg" alt="Tuning"></div>
+                <div class="swiper-slide"><img src="img/livros-carrossel/UX.svg" alt="UX"></div>
+            </div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <div class="card">
+            <div class="card__descricao">
+                <div class="card__descricao__descricao">
+                    <h3 class="card__titulo">Talvez você também se interesse por...</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets'
+            }
+        });
+    </script>
 </body>
 </html>
