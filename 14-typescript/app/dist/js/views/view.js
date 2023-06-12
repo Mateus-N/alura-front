@@ -5,7 +5,6 @@ export class View {
     }
     update(model) {
         let template = this.template(model);
-        template = template.replace(/<script[\s\S]*?<\/script>/, '');
         this.elemento.innerHTML = template;
     }
 }
