@@ -14,6 +14,12 @@ export class Negociacao {
         return data;
     }
 
+    public ehIgual(negociacao: Negociacao): boolean {
+        return this.data.getDate() === negociacao.data.getDate()
+            && this.data.getMonth() === negociacao.data.getMonth()
+            && this.data.getFullYear() === negociacao.data.getFullYear();
+    }
+
     public static criaDe(dataString: string, quantidadeString: string, valorString: string): Negociacao {
         const exp = /-/g;
         const date = new Date(dataString.replace(exp, ','));

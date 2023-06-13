@@ -1,7 +1,4 @@
 export class Negociacao {
-    _data;
-    quantidade;
-    valor;
     constructor(_data, quantidade, valor) {
         this._data = _data;
         this.quantidade = quantidade;
@@ -13,6 +10,11 @@ export class Negociacao {
     get data() {
         const data = new Date(this._data.getTime());
         return data;
+    }
+    ehIgual(negociacao) {
+        return this.data.getDate() === negociacao.data.getDate()
+            && this.data.getMonth() === negociacao.data.getMonth()
+            && this.data.getFullYear() === negociacao.data.getFullYear();
     }
     static criaDe(dataString, quantidadeString, valorString) {
         const exp = /-/g;
